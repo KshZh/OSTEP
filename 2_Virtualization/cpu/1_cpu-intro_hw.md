@@ -71,7 +71,7 @@ Questions
 
 7. Now run the same processes, but with -I IO_RUN_IMMEDIATE set, which immediately runs the process that issued the I/O. How does this behavior differ? Why might running a process that just completed an I/O again be a good idea?
 
-   **关键就是要让CPU和外设尽可能忙起来，最好不放过任何一个时间单位是他们并行地工作**。满足这一条件的调度往往更高效。
+   **关键就是要让CPU和外设尽可能忙起来，最好不放过任何一个时间单位使它们并行地工作**。满足这一条件的调度往往更高效。
 
 8. Now run with some randomly generated processes: -s 1 -l 3:50,3:50 or -s 2 -l 3:50,3:50 or -s 3 -l 3:50,3:50. See if you can predict how the trace will turn out. What happens when you use the ﬂag -I IO_RUN_IMMEDIATE vs. -I IO_RUN_LATER? What happens when you use -S SWITCH_ON_IO vs. -S SWITCH_ON_END?
 
